@@ -53,16 +53,16 @@ class TableViewController: UIViewController {
         tableView.allowsSelectionDuringEditing = true
         
         for i in 1...5 {
-                items.append(DataItem(title: "Toiletries #0\(i)", subtitle: "Don't forget me! #\(i)", imageName: "images/toiletries0\(i).jpg"))
-        
-            for i in 1...5 {
-                otherItems.append(DataItem(title: "Clothing #0\(i)", subtitle: "This is another item to pack #\(i)", imageName: "images/clothing0\(i).jpg"))
-                }
-            }
+            items.append(DataItem(title: "Toiletries #0\(i)", subtitle: "Don't forget me! #\(i)", imageName: "images/toiletries0\(i).jpg"))
             allItems.append(items)
-            allItems.append(otherItems)
-      }
+        }
+
+        for i in 1...5 {
+            otherItems.append(DataItem(title: "Clothing #0\(i)", subtitle: "This is another item to pack #\(i)", imageName: "images/clothing0\(i).jpg"))
+        }
+        allItems.append(otherItems)
     }
+}
 
 extension TableViewController: UITableViewDataSource {
     
